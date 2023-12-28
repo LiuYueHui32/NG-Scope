@@ -53,6 +53,9 @@ if(NOT CMAKE_BUILD_TYPE)
 endif(NOT CMAKE_BUILD_TYPE)
 set(CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE} CACHE STRING "")
 
+SET(CMAKE_BUILD_TYPE "Debug")
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread") #mod
+
 # Generate CMake to include build information
 configure_file(
   ${PROJECT_SOURCE_DIR}/cmake/modules/SRSRANbuildinfo.cmake.in

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "ngscope_def.h": "c",
+        "signal.h": "c"
+    }
+}

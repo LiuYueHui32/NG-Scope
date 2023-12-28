@@ -332,11 +332,11 @@ int dci_decoder_decode(ngscope_dci_decoder_t*       dci_decoder,
 
 			/*********************   Print decoding result  **********************/
 
-			//int nof_node = srsran_ngscope_tree_non_empty_nodes(&tree);
+			int nof_node = srsran_ngscope_tree_non_empty_nodes(&tree);
 			//printf("decoder: TTI:%d left %d non-empty nodes found:%d dl_dci %d ul_dci!\n", tti, nof_node, \
 						dci_per_sub->nof_dl_dci, dci_per_sub->nof_ul_dci); 
-			//srsran_ngscope_print_dci_per_sub(dci_per_sub);
-			//printf("\n");
+			srsran_ngscope_print_dci_per_sub(dci_per_sub);
+			printf("\n");
 
 		}
 	} 
@@ -429,7 +429,7 @@ void* dci_decoder_thread(void* p){
 
 	int decoder_idx = dci_decoder->decoder_idx;
     int rf_idx     	= dci_decoder->prog_args.rf_index;
-    uint16_t targetRNTI 	= dci_decoder->prog_args.rnti;  
+    //uint16_t targetRNTI 	= dci_decoder->prog_args.rnti;  
 
 	printf("decoder idx :%d \n", decoder_idx);
     ngscope_dci_per_sub_t   dci_per_sub; 

@@ -28,7 +28,7 @@ int ngscope_read_config(ngscope_config_t* config){
     config_init(cfg);
 
     printf("read config!\n");
-    if(! config_read_file(cfg, "./config.cfg")){
+    if(! config_read_file(cfg, "/home/lyh/repository/v2.2/NG-Scope/ngscope/config/config.cfg")){
         fprintf(stderr, "%s:%d - %s\n", config_error_file(cfg),
                 config_error_line(cfg), config_error_text(cfg));
         config_destroy(cfg);

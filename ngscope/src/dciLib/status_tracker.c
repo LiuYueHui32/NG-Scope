@@ -27,7 +27,7 @@
 #include "ngscope/hdr/dciLib/dci_sink_serv.h"
 #include "ngscope/hdr/dciLib/dci_sink_sock.h"
 
-//#define TTI_TO_IDX(i) (i%CELL_STATUS_RING_BUF_SIZE)
+#define TTI_TO_IDX(i) (i%CELL_STATUS_RING_BUF_SIZE)
 
 extern bool go_exit;
 
@@ -227,7 +227,7 @@ void* status_tracker_thread(void* p){
         //printf("Copy %d dci->", nof_dci); 
         for(int i=0; i<nof_dci; i++){
 			fprintf(fd, "%d\t%d\n", dci_queue[i].tti, nof_dci);
-            //printf(" %d-th dci: ul dci:%d dl_dci:%d  tti:%d IDX:%d\n", i, dci_queue[i].dci_per_sub.nof_ul_dci, \
+            fprintf(fd, " %d-th dci: ul dci:%d dl_dci:%d  tti:%d IDX:%d\n", i, dci_queue[i].dci_per_sub.nof_ul_dci, \
             dci_queue[i].dci_per_sub.nof_dl_dci, dci_queue[i].tti, TTI_TO_IDX(dci_queue[i].tti));
         }
 		//printf("\n");

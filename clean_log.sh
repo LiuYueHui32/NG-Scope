@@ -1,0 +1,10 @@
+rm -f ./decoder_0.txt
+rm -f ./decoder_1.txt
+rm -f ./decoder_2.txt
+rm -f ./decoder_3.txt
+rm -f ./dci_log.txt
+rm -f ./dci_log_cell.txt
+rm -f ./dci_ring_buffer.txt
+rm -f /home/lyh/repository/v2.2/NG-Scope/cell_status.txt
+rm -f /home/lyh/repository/v2.2/NG-Scope/status_tracker.txt
+rm -f /home/lyh/repository/v2.2/NG-Scope/task_scheduler.txt
